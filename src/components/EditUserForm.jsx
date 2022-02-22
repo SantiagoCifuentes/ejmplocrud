@@ -9,7 +9,7 @@ const EditUserForm = (props) => {
         defaultValues: props.currentUser // se trae la información del editRow
     })
 
-    setValue('name',props.currentUser.name)
+    setValue('name',props.currentUser.name) //estas lineas son las que van a poner el nombre y apellido  en el campo de texto al momento de seleccionar el usuario a editar
     setValue('username',props.currentUser.username)
 
 
@@ -20,7 +20,7 @@ const EditUserForm = (props) => {
         props.updateUser(props.currentUser.id,data)
         e.target.reset()//limpia cada uno de los inputs
     }
-
+    //validaciones
 
     return ( 
         <form onSubmit={handleSubmit(onSubmit)}>
